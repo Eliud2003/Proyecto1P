@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/fondo2"
+    tools:context=".HomeActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <!-- Encabezado: Bienvenida + iconos -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingBottom="8dp">
+            <TextView
+                android:id="@+id/usernameTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/bienvenido_usuario"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/black" />
+            <FrameLayout
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="8dp"
+                android:foreground="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="abrirAcercaDe">
+                <ImageView
+                    android:id="@+id/ic"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_info"
+                    android:contentDescription="@string/informacion" />
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:foreground="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="cerrarSesion">
+                <ImageView
+                    android:id="@+id/logoutIcon"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_logout"
+                    android:contentDescription="@string/cerrar_sesion" />
+            </FrameLayout>
+        </LinearLayout>
+
+
+        <!-- Contenedor de categorías -->
+        <LinearLayout
+            android:id="@+id/cardContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="24dp"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:gravity="center">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="16dp">
+                <!-- FARMACEUTICOS -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="8dp"
+                    android:gravity="center_horizontal"
+                    android:background="@android:color/transparent">
+                    <ImageButton
+                        android:id="@+id/cardFarmaceuticos"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:src="@drawable/farmaceuticos"
+                        android:scaleType="centerInside"
+                        android:contentDescription="Farmaceuticos"
+                        android:background="@android:color/transparent" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="FARMACEUTICOS"
+                        android:textSize="25sp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:gravity="center" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="16dp">
+                <!-- FARMACEUTICOS -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="8dp"
+                    android:gravity="center_horizontal"
+                    android:background="@android:color/transparent">
+                    <ImageButton
+                        android:id="@+id/cardMedicinas"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:src="@drawable/medicina"
+                        android:scaleType="centerInside"
+                        android:contentDescription="Farmaceuticos"
+                        android:background="@android:color/transparent" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="MEDICINAS"
+                        android:textSize="25sp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:gravity="center" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="16dp">
+                <!-- FARMACEUTICOS -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="8dp"
+                    android:gravity="center_horizontal"
+                    android:background="@android:color/transparent">
+                    <ImageButton
+                        android:id="@+id/cardCompra"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:src="@drawable/compra"
+                        android:scaleType="centerInside"
+                        android:contentDescription="Farmaceuticos"
+                        android:background="@android:color/transparent" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="COMPRA Y VENTA"
+                        android:textSize="25sp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:gravity="center" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

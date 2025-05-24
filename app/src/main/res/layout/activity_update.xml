@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Farmaceuticos.UpdateActivity">
+
+    <!-- Título -->
+    <TextView
+        android:id="@+id/editTitulo"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="@string/updateFarmaceutico"
+        android:textStyle="bold"
+        android:textSize="35sp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgFotoGrupo"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/editTitulo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/equipo"
+        android:scaleType="centerCrop"
+        android:layout_marginBottom="5dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:layout_margin="20dp"
+        app:layout_constraintTop_toBottomOf="@id/imgFotoGrupo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" >
+
+        <!-- Nombre Completo -->
+        <EditText
+            android:id="@+id/updateNombreCompleto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@color/background"
+            android:hint="@string/nombreCompleto"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:padding="16dp"
+            android:drawableStart="@drawable/ic_nombre"
+            android:drawablePadding="16dp" />
+
+        <!-- Cédula -->
+        <EditText
+            android:id="@+id/updatecedula"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/updateNombreCompleto"
+            android:layout_marginTop="16dp"
+            android:background="@color/background"
+            android:hint="@string/cedula"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:padding="16dp"
+            android:drawableStart="@drawable/ic_numero"
+            android:drawablePadding="16dp" />
+
+        <!-- Teléfono -->
+        <EditText
+            android:id="@+id/updatetelefono"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/updatecedula"
+            android:layout_marginTop="16dp"
+            android:background="@color/background"
+            android:hint="@string/telefono"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:padding="16dp"
+            android:drawableStart="@drawable/ic_telefono"
+            android:drawablePadding="16dp" />
+
+        <!-- Edad -->
+        <EditText
+            android:id="@+id/updateedad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/updatetelefono"
+            android:layout_marginTop="16dp"
+            android:background="@color/background"
+            android:hint="@string/edad"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:padding="16dp"
+            android:drawableStart="@drawable/ic_numero"
+            android:drawablePadding="16dp"  />
+
+        <!-- Años de Experiencia -->
+        <EditText
+            android:id="@+id/updateañosExperiencia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/updateedad"
+            android:layout_marginTop="16dp"
+            android:background="@color/background"
+            android:hint="@string/añosExperiencia"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:padding="16dp"
+            android:drawableStart="@drawable/ic_numero"
+            android:drawablePadding="16dp"  />
+
+        <!-- Botón Guardar -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnActualizar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/updateañosExperiencia"
+            android:text="Actualizar"
+            android:backgroundTint="@color/add"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="24dp"/>
+
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">Proyecto1P</string>
+
+    <!-- Actividades principales -->
+    <string name="bienvenido_usuario">Bienvenido, Usuario</string>
+    <string name="campana_notificacion">Campana de Notificación</string>
+    <string name="cerrar_sesion">Cerrar Sesión</string>
+    <string name="informacion">Información</string>
+    <string name="menu">Menu</string>
+    <string name="regresar">Regresar</string>
+    <string name="welcome_message">Bienvenido, %1$s</string>
+    <string name="acerca_de">Acerca de la App</string>
+
+    <!-- Información del proyecto -->
+    <string name="info_proyecto">Proyecto 1er Parcial
+        \nAplicación de compra y venta de insumos medicos
+        \nUsuario/contraseña: admin</string>
+    <string name="integrantes">Integrantes:\n\n
+    Tenesaca Pincay Cinthia\n\n
+    Suarez Clemente Eliud\n\n
+    Gallegos Freire Bruno</string>
+
+    <!-- Inicio de sesión y registro -->
+    <string name="crear_cuenta">Crear Cuenta</string>
+    <string name="facebook_btn">Iniciar sesión con Facebook</string>
+    <string name="google_btn">Iniciar sesión con Google</string>
+    <string name="iniciar_sesion">Iniciar Sesión</string>
+    <string name="iniciar_sesion_con">o iniciar sesión con</string>
+    <string name="olvidar_contraseña">Olvidé mi contraseña</string>
+    <string name="usuario">Usuario</string>
+    <string name="contraseña">Contraseña</string>
+
+    <!-- Funcionalidad -->
+    <string name="borrar_datos">Borrar datos</string>
+    <string name="btn_BorrarDatos">Borrar Datos</string>
+    <string name="btn_MantenerSesion">Mantener Sesion</string>
+    <string name="btn_MostrarDatos">Mostrar Datos Registrados</string>
+    <string name="btn_borrar">Borrar</string>
+    <string name="btn_cancelar">Cancelar</string>
+    <string name="btn_registrar">Registrar</string>
+
+    <!-- Farmaceuticos -->
+    <string name="id">Ingrese un id</string>
+    <string name="nombreCompleto">Ingrese su nombre completo</string>
+    <string name="cedula">Ingrese su cedula</string>
+    <string name="telefono">Ingrese su telefono</string>
+    <string name="edad">Ingrese su edad</string>
+    <string name="añosExperiencia">Ingrese sus años de experiencia</string>
+    <string name="btn_guardar">Guardar</string>
+    <string name="addFarmaceutico">¡Únete a Nuestro Equipo de Farmacéuticos!</string>
+    <string name="updateFarmaceutico">¡Transforma y Actualiza! Edita la Información del Farmacéutico!</string>
+    <string name="farmaceutico_image">Icono farmaceutico</string>
+
+</resources>
