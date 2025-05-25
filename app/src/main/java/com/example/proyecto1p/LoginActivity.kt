@@ -1,4 +1,3 @@
-
 package com.example.proyecto1p
 
 import android.content.Intent
@@ -29,6 +28,7 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var googleButton: ImageView
     private lateinit var facebookButton: ImageView
     private lateinit var checkBoxMantenerSesion: CheckBox
+    private lateinit var btnCrearCuenta: MaterialButton
 
     companion object {
         const val PREFS_NAME = "LoginPrefs"
@@ -63,6 +63,7 @@ class LoginActivity : AppCompatActivity() {
         googleButton = findViewById(R.id.googlebtn)
         facebookButton = findViewById(R.id.facebookbtn)
         checkBoxMantenerSesion = findViewById(R.id.checkBoxMantenerSesion)
+        btnCrearCuenta = findViewById(R.id.btnCrearCuenta)
     }
 
     private fun initListeners() {
@@ -105,6 +106,12 @@ class LoginActivity : AppCompatActivity() {
             intent.putExtra("nombreUsuario", "Carlos")
             startActivity(intent)
             finish()
+        }
+
+        // NUEVO: Listener para el botón crear cuenta
+        btnCrearCuenta.setOnClickListener {
+            val intent = Intent(this, RegisterActivity::class.java)
+            startActivity(intent)
         }
     }
 

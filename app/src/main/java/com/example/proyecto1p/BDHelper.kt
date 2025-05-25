@@ -14,6 +14,12 @@ class BDHelper (context: Context): SQLiteOpenHelper(context, DATABASE_NAME, null
         private const val COLUMN_PASSWORD = "password"
     }
 
+    enum class UserCreationResult {
+        SUCCESS,
+        USER_EXISTS,
+        ERROR
+    }
+
     override fun onCreate(db: SQLiteDatabase) {
         val createTable = """
             CREATE TABLE $TABLE_USERS (
@@ -43,5 +49,37 @@ class BDHelper (context: Context): SQLiteOpenHelper(context, DATABASE_NAME, null
         val exists = cursor.count > 0
         cursor.close()
         return exists
+    }
+
+    fun createUser(username: String, password: String): UserCreationResult {
+        val db = writableDatabase
+
+        return try {
+            // Verificar si el usuario ya existe
+            val checkQuery = "SELECT * FROM $TABLE_USERS WHERE $COLUMN_USERNAME = ?"
+            val cursor = db.rawQuery(checkQuery, arrayOf(username))
+
+            if (cursor.count > 0) {
+                cursor.close()
+                UserCreationResult.USER_EXISTS
+            } else {
+                cursor.close()
+
+                // Crear el nuevo usuario
+                val values = ContentValues().apply {
+                    put(COLUMN_USERNAME, username)
+                    put(COLUMN_PASSWORD, password)
+                }
+
+                val result = db.insert(TABLE_USERS, null, values)
+                if (result != -1L) {
+                    UserCreationResult.SUCCESS
+                } else {
+                    UserCreationResult.ERROR
+                }
+            }
+        } catch (e: Exception) {
+            UserCreationResult.ERROR
+        }
     }
 }
