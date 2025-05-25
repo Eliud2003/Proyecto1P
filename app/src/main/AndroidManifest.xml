@@ -34,6 +34,15 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".medicinas.UpdateMedicinaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".medicinas.addMedicinasActivity"
+            android:exported="false" />
+        <activity
+            android:name=".medicinas.InicioMedicinasActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true" />
     </application>

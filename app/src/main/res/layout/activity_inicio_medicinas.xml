@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    tools:context=".medicinas.InicioMedicinasActivity">
+
+    <!-- Header -->
+    <TextView
+        android:id="@+id/headerTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Gestión de Medicinas."
+        android:textColor="#2E7D32"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Search Bar -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/searchLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="80dp"
+        android:hint="Buscar medicina..."
+        app:boxBackgroundColor="@android:color/white"
+        app:boxStrokeColor="#4CAF50"
+        app:hintTextColor="#4CAF50"
+        app:layout_constraintEnd_toStartOf="@+id/addButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerTitle"
+        app:startIconDrawable="@android:drawable/ic_menu_search"
+        app:startIconTint="#4CAF50">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editBuscarMedicina"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#333333" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Add Button -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#4CAF50"
+        android:src="@android:drawable/ic_input_add"
+        app:layout_constraintBottom_toBottomOf="@+id/searchLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/searchLayout"
+        app:tint="@android:color/white" />
+
+    <!-- RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/medicinasRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/white"
+        android:elevation="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

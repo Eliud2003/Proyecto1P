@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        tools:context=".Medicinas.UpdateMedicinaActivity">
+
+        <!-- Header -->
+        <TextView
+            android:id="@+id/headerTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Actualizar Medicina."
+            android:textColor="#2E7D32"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Nombre -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/updateNombreLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:hint="Nombre de la medicina"
+            app:boxBackgroundColor="@android:color/white"
+            app:boxStrokeColor="#4CAF50"
+            app:hintTextColor="#4CAF50"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/headerTitle">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/updateNombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:textColor="#333333" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Principio Activo -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/updatePrincipioActivoLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Principio activo"
+            app:boxBackgroundColor="@android:color/white"
+            app:boxStrokeColor="#4CAF50"
+            app:hintTextColor="#4CAF50"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/updateNombreLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/updatePrincipioActivo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:textColor="#333333" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Concentración -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/updateConcentracionLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Concentración (ej: 500mg)"
+            app:boxBackgroundColor="@android:color/white"
+            app:boxStrokeColor="#4CAF50"
+            app:hintTextColor="#4CAF50"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/updatePrincipioActivoLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/updateConcentracion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:textColor="#333333" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Precio -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/updatePrecioLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Precio"
+            app:boxBackgroundColor="@android:color/white"
+            app:boxStrokeColor="#4CAF50"
+            app:hintTextColor="#4CAF50"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/updateConcentracionLayout"
+            app:prefixText="$">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/updatePrecio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:textColor="#333333" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Stock -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/updateStockLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Stock disponible"
+            app:boxBackgroundColor="@android:color/white"
+            app:boxStrokeColor="#4CAF50"
+            app:hintTextColor="#4CAF50"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/updatePrecioLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/updateStock"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:textColor="#333333" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Fecha de Vencimiento -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/updateFechaVencimientoLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Fecha de vencimiento (DD/MM/AAAA)"
+            app:boxBackgroundColor="@android:color/white"
+            app:boxStrokeColor="#4CAF50"
+            app:hintTextColor="#4CAF50"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/updateStockLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/updateFechaVencimiento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:textColor="#333333" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Botón Actualizar -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnActualizar"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="24dp"
+            android:backgroundTint="#FF9800"
+            android:text="Actualizar Medicina"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:cornerRadius="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/updateFechaVencimientoLayout" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
