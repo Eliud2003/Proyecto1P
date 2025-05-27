@@ -223,7 +223,7 @@
             android:layout_height="wrap_content"
             android:text="Generar Factura"
             android:textSize="16sp"
-            android:backgroundTint="@color/purple_500"
+            android:backgroundTint="?attr/colorPrimary"
             android:layout_marginTop="16dp"
             android:contentDescription="Generar factura de la venta" />
 

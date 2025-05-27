@@ -7,4 +7,14 @@
     <color name="background">#EDEDED</color>
     <color name="fondo">#A5E2E2</color>
     <color name="delete">#FF0029</color>
+    <!-- Agregar estos colores si no los tienes -->
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+
+    <!-- Colores adicionales si los necesitas -->
+    <color name="colorPrimary">#FF6200EE</color>
+    <color name="colorPrimaryVariant">#FF3700B3</color>
+    <color name="colorOnPrimary">#FFFFFFFF</color>
 </resources>
