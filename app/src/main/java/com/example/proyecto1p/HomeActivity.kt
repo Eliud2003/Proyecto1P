@@ -16,6 +16,7 @@ import android.app.AlertDialog
 import android.widget.ImageButton
 import com.example.proyecto1p.Farmaceuticos.InicioFarmaceuticosActivity
 import com.example.proyecto1p.medicinas.InicioMedicinasActivity
+import com.example.proyecto1p.compras.HistorialVentasActivity
 
 
 class HomeActivity : AppCompatActivity() {
@@ -91,6 +92,7 @@ class HomeActivity : AppCompatActivity() {
     }
 
     private fun irCompras() {
-
+        val intent = Intent(this, HistorialVentasActivity::class.java)
+        startActivity(intent)
     }
 }
